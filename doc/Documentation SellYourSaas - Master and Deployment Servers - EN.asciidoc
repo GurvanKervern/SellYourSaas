@@ -312,7 +312,8 @@ Create a file */etc/sudoers.d/myunixlogin* with the content
 
 [source, conf]
 ---------------
-myunixlogin ALL=(ALL) NOPASSWD:ALL
+myunixlogin ALL=(ALL) ALL
+myunixlogin ALL=(ALL) NOPASSWD:/usr/bin/su - admin
 ---------------
 
 This allows you to switch to admin or any osu... user without typing your password too :
